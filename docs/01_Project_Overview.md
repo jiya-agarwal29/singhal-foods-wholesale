@@ -2,53 +2,83 @@
 
 ## Project Overview
 
-Singhal Foods is a full-stack MERN web application designed for wholesale food product distribution. The platform enables hotels, restaurants, retailers, and other business customers to browse products, place bulk orders, and manage purchases online. It also provides an admin dashboard for inventory management, product management, and order processing.
+Singhal Foods is a full-stack MERN B2B wholesale food ordering and inventory management platform inspired by my family's wholesale business. The application is designed to digitalize the traditional wholesale ordering process by providing a centralized platform for business customers such as hotels, restaurants, caterers, and retailers to browse products, place wholesale orders, and manage recurring purchases online.
 
-The project is inspired by my family's wholesale business, Singhal Foods, with the goal of digitizing the existing offline ordering process.
+Unlike traditional B2C grocery platforms, Singhal Foods focuses on the operational requirements of businesses by supporting wholesale ordering workflows, inventory-aware management, and business-specific features such as Quick Reorder and Business Notes. The platform also provides a secure administrative dashboard to manage products, inventory, business customers, and order processing efficiently.
 
 ---
 
 ## Problem Statement
 
-The current wholesale ordering process relies heavily on phone calls, WhatsApp messages, and manual record-keeping. This makes order management, inventory tracking, and customer communication inefficient.
+The existing wholesale ordering process primarily relies on phone calls, WhatsApp messages, and manual record-keeping, making inventory management and order processing time-consuming and difficult to track. As the number of customers and products increases, maintaining accurate stock information and processing recurring orders becomes increasingly inefficient.
 
-The proposed system provides a centralized digital platform to streamline product management, inventory control, and wholesale order processing.
+The proposed system addresses these challenges by providing a centralized web-based platform that streamlines product management, inventory tracking, and wholesale order processing while improving the overall experience for both customers and administrators.
 
 ---
 
 ## Project Objectives
 
-- Build a production-ready full-stack MERN application.
-- Digitize the wholesale ordering process.
+- Develop a scalable full-stack MERN application for wholesale food ordering.
+- Digitalize the existing offline wholesale ordering process.
+- Simplify inventory and product management.
 - Provide secure authentication and role-based authorization.
-- Simplify inventory and order management.
-- Deliver a responsive and user-friendly experience.
-- Deploy the application for real-world use.
+- Enable efficient order processing and order tracking.
+- Reduce repetitive ordering through the Quick Reorder feature.
+- Improve communication between business customers and administrators using Business Notes.
+- Deploy the application as a production-ready web platform.
 
 ---
 
 ## Target Users
 
-### Customer
+### Business Customers
+
 - Hotels
 - Restaurants
-- Retailers
+- Cafes
 - Caterers
+- Retail Stores
+- Hostels
+- Canteens
 
 ### Administrator
+
 - Store Owner
-- Staff
+- Inventory Manager
+- Staff Members
 
 ---
 
 ## Technology Stack
 
+### Frontend
+
 - React.js
 - Tailwind CSS
+- React Router
+- Axios
+
+### Backend
+
 - Node.js
 - Express.js
+
+### Database
+
 - MongoDB
-- JWT Authentication
-- Git & GitHub
+- MongoDB Atlas
+
+### Authentication
+
+- JWT (JSON Web Tokens)
+- bcrypt
+
+### Deployment
+
 - Vercel
 - Render
+
+### Version Control
+
+- Git
+- GitHub
