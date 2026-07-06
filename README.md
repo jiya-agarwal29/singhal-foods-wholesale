@@ -1,36 +1,124 @@
-# singhal-foods-wholesale
-Full-stack MERN wholesale grocery ordering platform for hotels, restaurants, and retailers.
+# Singhal Foods
+
+> A Full-Stack MERN B2B Wholesale Food Ordering & Inventory Management Platform
+
+Singhal Foods is a full-stack MERN web application inspired by my family's wholesale food business. The platform is designed specifically for **hotels, restaurants, caterers, and retailers**, enabling them to place wholesale orders online while allowing administrators to efficiently manage products, inventory, and customer orders.
+
+Unlike traditional B2C grocery platforms, this application focuses on the operational needs of business customers by supporting recurring wholesale purchases, inventory management, and business-specific ordering workflows.
+
+---
+
 ## 🚀 Tech Stack
 
-- React
+### Frontend
+- React.js
+- Tailwind CSS
+- React Router
+- Axios
+
+### Backend
 - Node.js
 - Express.js
+
+### Database
 - MongoDB
-- Tailwind CSS
-- JWT Authentication
+- MongoDB Atlas
 
-## 🎯 Project Goal
+### Authentication
+- JWT
+- bcrypt
 
-Build and deploy a production-like wholesale ordering platform for Singhal Foods.
+### Deployment
+- Vercel
+- Render
 
-## 📌 Planned Features
+### Version Control
+- Git
+- GitHub
 
-### Customer
-- Product Catalog
+---
+
+## ✨ Planned Features
+
+### 👤 Business Customer
+
+- Business Registration & Login
+- Browse Products
 - Search Products
-- Categories
+- Category Filtering
+- Product Details
 - Shopping Cart
-- Login & Register
-- Place Orders
+- Bulk Wholesale Orders
 - Order History
+- ⭐ Quick Reorder
+- ⭐ Business Notes
+- Profile Management
 
-### Admin
+---
+
+### 👨‍💼 Administrator
+
+- Secure Admin Login
 - Dashboard
-- Product Management
-- Stock Management
-- Order Management
+- Product Management (CRUD)
+- Inventory Management
+- Stock Updates
 - Low Stock Alerts
+- ⭐ Smart Restock Suggestions
+- Order Management
+- Business Customer Management
 
-## 📂 Project Status
+---
+
+## 🎯 Project Goals
+
+- Digitize the wholesale ordering process.
+- Simplify inventory management.
+- Provide secure authentication and authorization.
+- Deliver a scalable MERN application.
+- Deploy the application for real-world usage.
+
+---
+
+## 📂 Repository Structure
+
+```
+singhal-foods/
+│
+├── client/
+├── server/
+├── docs/
+└── README.md
+```
+
+---
+
+## 📖 Documentation
+
+Project documentation is available in the **docs/** folder.
+
+Current documentation includes:
+
+- Project Overview
+- Requirements
+- Features
+
+More documentation will be added as development progresses.
+
+---
+
+## 📌 Project Status
 
 🟡 Planning Phase
+
+The project is currently in the planning and software design stage. Development will begin after completing the project documentation.
+
+---
+
+## 👩‍💻 Author
+
+**Jiya Agarwal**
+
+B.Tech Information Technology
+
+Vishwakarma Institute of Technology, Pune
