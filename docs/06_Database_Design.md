@@ -1,4 +1,4 @@
-# Database Design
+# Database Collections
 
 ## 1. Overview
 
