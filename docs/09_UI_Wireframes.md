@@ -399,3 +399,31 @@ Purpose:
 - Modify quantities
 - Save time for repeat customers
 - Simplify bulk ordering
+
+  09_UI_Wireframes
+
+│
+├── Common Customer Header
+├── Common Customer Footer
+│
+├── Customer UI
+│   ├── Home
+│   ├── Products
+│   ├── Product Details
+│   ├── Cart
+│   ├── Checkout
+│   ├── Order History
+│   ├── Quick Reorder
+│   └── Profile
+│
+├── Admin UI
+│   ├── Admin Login
+│   ├── Dashboard
+│   ├── Products
+│   ├── Categories
+│   ├── Orders
+│   ├── Customers
+│   ├── Inventory
+│   └── Profile
+│
+└── Navigation Flow
