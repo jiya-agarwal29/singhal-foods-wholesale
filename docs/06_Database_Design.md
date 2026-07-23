@@ -23,9 +23,10 @@ Stores information about registered business customers and administrators.
 | gstNumber | String | GST Number (Optional) |
 | email | String | Unique email address |
 | phone | String | Contact number |
-| password | String | Encrypted password |
-| deliveryAddress | String | Business delivery address |
+| password | String | Hashed password |
+| deliveryAddress | Object | Business delivery address |
 | role | String | Customer or Admin |
+| isVerified | Boolean | Whether the account is verified (Default: false)|
 | createdAt | Date | Account creation date |
 | updatedAt | Date | Last updated date |
 
