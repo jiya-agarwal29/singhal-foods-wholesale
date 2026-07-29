@@ -1,232 +1,193 @@
----
+# Folder Structure
 
-# Frontend Structure
+```
+singhal-foods/
+│
+├── client/                          # React Frontend
+│
+│   ├── public/
+│   │
+│   └── src/
+│       │
+│       ├── assets/
+│       │
+│       ├── components/
+│       │   ├── common/
+│       │   ├── customer/
+│       │   └── admin/
+│       │
+│       ├── pages/
+│       │   ├── auth/
+│       │   │   ├── Login.jsx
+│       │   │   ├── Register.jsx
+│       │   │   ├── ForgotPassword.jsx
+│       │   │   ├── VerifyOTP.jsx
+│       │   │   └── ResetPassword.jsx
+│       │   │
+│       │   ├── customer/
+│       │   │   ├── Dashboard.jsx
+│       │   │   ├── Products.jsx
+│       │   │   ├── Cart.jsx
+│       │   │   ├── Checkout.jsx
+│       │   │   ├── Orders.jsx
+│       │   │   └── Profile.jsx
+│       │   │
+│       │   └── admin/
+│       │       ├── Dashboard.jsx
+│       │       ├── Products.jsx
+│       │       ├── Orders.jsx
+│       │       ├── Customers.jsx
+│       │       ├── Payments.jsx
+│       │       ├── Notifications.jsx
+│       │       ├── Inventory.jsx
+│       │       ├── Reports.jsx
+│       │       └── AdminManagement.jsx
+│       │
+│       ├── services/
+│       │
+│       ├── context/
+│       │
+│       ├── hooks/
+│       │
+│       ├── utils/
+│       │
+│       ├── App.jsx
+│       └── main.jsx
+│
+├── server/
+│   │
+│   ├── config/
+│   │   ├── db.js
+│   │   └── nodemailer.js
+│   │
+│   ├── controllers/
+│   │   ├── auth.controller.js
+│   │   ├── product.controller.js
+│   │   ├── cart.controller.js
+│   │   ├── order.controller.js
+│   │   ├── admin.controller.js
+│   │   ├── notification.controller.js
+│   │   └── payment.controller.js
+│   │
+│   ├── middleware/
+│   │   ├── auth.middleware.js
+│   │   ├── admin.middleware.js
+│   │   └── error.middleware.js
+│   │
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Product.js
+│   │   ├── Category.js
+│   │   ├── Cart.js
+│   │   ├── Order.js
+│   │   ├── Notification.js
+│   │   └── address.schema.js
+│   │
+│   ├── routes/
+│   │   ├── auth.routes.js
+│   │   ├── product.routes.js
+│   │   ├── cart.routes.js
+│   │   ├── order.routes.js
+│   │   ├── admin.routes.js
+│   │   ├── notification.routes.js
+│   │   └── payment.routes.js
+│   │
+│   ├── services/
+│   │   ├── generateToken.js
+│   │   ├── email.service.js
+│   │   └── otp.service.js
+│   │
+│   ├── utils/
+│   │
+│   ├── app.js
+│   ├── server.js
+│   └── seedAdmin.js
+│
+├── docs/
+│
+├── .gitignore
+├── README.md
+├── LICENSE
+└── package.json
+```
 
-The frontend is built using React and is responsible for the user interface and user interactions.
+# Folder Description
 
-## assets/
+## client/
 
-Stores static resources used throughout the application.
-
-Examples:
-- Images
-- Logos
-- Icons
-- Fonts
-
-Purpose:
-Keeps all media files organized in one location for easy reuse.
-
----
-
-## components/
-
-Contains reusable UI components that can be used across multiple pages.
-
-Examples:
-- Navbar
-- Footer
-- ProductCard
-- SearchBar
-- Button
-
-Purpose:
-Avoids code duplication and improves maintainability.
-
----
-
-## pages/
-
-Contains all application pages that correspond to different routes.
-
-Examples:
-- Home
-- Login
-- Register
-- Products
-- Product Details
-- Cart
-- Checkout
-- Orders
-- Admin Dashboard
-
-Purpose:
-Represents complete webpages displayed to the user.
-
----
-
-## layouts/
-
-Contains common page layouts shared across multiple pages.
-
-Examples:
-- Main Layout
-- Admin Layout
-
-Purpose:
-Provides a consistent structure by reusing common elements such as the Navbar, Sidebar, and Footer.
-
----
-
-## hooks/
-
-Contains custom React Hooks.
-
-Examples:
-- useFetch
-- useDebounce
-- useAuth
-
-Purpose:
-Encapsulates reusable React logic and improves code reusability.
-
----
-
-## context/
-
-Contains React Context providers used for global state management.
-
-Examples:
-- AuthContext
-- CartContext
-
-Purpose:
-Allows data such as authentication status and shopping cart information to be shared across components without prop drilling.
-
----
-
-## services/
-
-Contains functions responsible for communicating with backend APIs using Axios.
-
-Examples:
-- authService
-- productService
-- cartService
-- orderService
-
-Purpose:
-Separates API calls from UI components, making the code cleaner and easier to maintain.
-
----
-
-## utils/
-
-Contains reusable helper functions.
-
-Examples:
-- formatPrice
-- calculateGST
-- validatePhoneNumber
-
-Purpose:
-Stores common utility functions that are used throughout the application.
+Contains the complete React frontend application.
 
 ---
 
-## routes/
+## server/
 
-Contains React Router configuration.
-
-Purpose:
-Defines navigation between pages and maps URLs to React components.
-
-Example:
-
-/products → Products Page
-
-/cart → Cart Page
-
-/admin → Admin Dashboard
-
----
-
-# Backend Structure
-
-The backend is developed using Node.js, Express.js, and MongoDB. It manages business logic, authentication, APIs, and database operations.
+Contains the complete Express.js backend application.
 
 ---
 
 ## config/
 
-Contains application configuration files.
+Stores project configuration files.
 
 Examples:
-- MongoDB connection
-- Environment configuration
-- JWT configuration
 
-Purpose:
-Stores application-level settings required by the server.
+- MongoDB Connection
+- Nodemailer Configuration
 
 ---
 
 ## controllers/
 
-Contains the business logic for handling requests.
-
-Responsibilities:
-- Receive requests from routes
-- Validate input
-- Perform business operations
-- Interact with database models
-- Return responses to the client
+Contains the business logic for handling API requests.
 
 Examples:
-- authController
-- productController
-- cartController
-- orderController
 
-Purpose:
-Implements the application's core functionality.
+- Authentication
+- Products
+- Orders
+- Payments
+- Notifications
 
 ---
 
 ## middleware/
 
-Contains middleware functions executed before the request reaches the controller.
+Contains middleware used throughout the backend.
 
 Examples:
-- JWT Authentication
-- Admin Authorization
-- Error Handling
-- CORS
 
-Purpose:
-Processes requests by performing authentication, validation, logging, or other tasks before business logic is executed.
+- JWT Authentication
+- Role-Based Authorization
+- Error Handling
 
 ---
 
 ## models/
 
-Contains Mongoose models representing MongoDB collections.
+Contains MongoDB (Mongoose) models.
 
 Examples:
+
 - User
 - Product
 - Category
 - Cart
 - Order
-
-Purpose:
-Defines the database schema and provides methods for interacting with MongoDB.
+- Notification
 
 ---
 
 ## routes/
 
-Defines all REST API endpoints of the application.
+Defines all REST API endpoints.
 
 Examples:
+
 - Authentication Routes
 - Product Routes
 - Cart Routes
 - Order Routes
 - Admin Routes
-
-Purpose:
-Maps incoming API requests to their corresponding controller functions.
 
 ---
 
@@ -235,176 +196,58 @@ Maps incoming API requests to their corresponding controller functions.
 Contains reusable backend services.
 
 Examples:
-- Email Service
-- Notification Service
-- Invoice Service
 
-Purpose:
-Stores reusable business functionalities that may be used by multiple controllers.
+- JWT Token Generation
+- Email Service
+- OTP Generation
 
 ---
 
 ## utils/
 
-Contains reusable helper functions used across the backend.
-
-Examples:
-- Generate JWT Token
-- Calculate GST
-- Format Date
-
-Purpose:
-Improves code reuse by keeping commonly used helper functions in one place.
+Contains helper functions and reusable utilities.
 
 ---
 
-# Request Flow
+## docs/
 
-The following sequence describes how a request is processed in the application.
-
-User Request
-
-↓
-
-React Component
-
-↓
-
-Axios Service
-
-↓
-
-Express Route
-
-↓
-
-Middleware
-
-↓
-
-Controller
-
-↓
-
-Model
-
-↓
-
-MongoDB
-
-↓
-
-Controller
-
-↓
-
-JSON Response
-
-↓
-
-React UI Updated
+Contains all project documentation.
 
 ---
 
-# Understanding Routes, Controllers and Models
+# Architecture
 
-These three components follow the principle of Separation of Concerns, where each has a specific responsibility.
+```
+React Frontend
+        │
+        ▼
+Express REST APIs
+        │
+        ▼
+Controllers
+        │
+        ▼
+Services
+        │
+        ▼
+MongoDB Models
+        │
+        ▼
+MongoDB Atlas
+```
 
-## Routes
+# Development Tools
 
-Routes define the API endpoints of the application.
-
-Responsibilities:
-- Receive incoming HTTP requests
-- Match the requested URL and HTTP method
-- Forward the request to the appropriate controller
-
-Example:
-
-GET /api/products
-
-↓
-
-productController.getProducts()
-
-Routes do **not** contain business logic.
-
----
-
-## Controllers
-
-Controllers contain the application's business logic.
-
-Responsibilities:
-- Receive requests from routes
-- Validate request data
-- Execute business operations
-- Interact with database models
-- Return appropriate HTTP responses
-
-Example:
-
-User requests all products
-
-↓
-
-Controller fetches products from MongoDB
-
-↓
-
-Returns JSON response
-
-Controllers decide **what should happen**.
-
----
-
-## Models
-
-Models represent MongoDB collections using Mongoose schemas.
-
-Responsibilities:
-- Define the structure of database documents
-- Perform CRUD operations
-- Validate database data
-- Interact directly with MongoDB
-
-Examples:
-- User Model
-- Product Model
-- Order Model
-
-Models are responsible for **storing and retrieving data**.
-
----
-
-# Complete Backend Flow
-
-Client Request
-
-↓
-
-Route
-
-↓
-
-Middleware
-
-↓
-
-Controller
-
-↓
-
-Model
-
-↓
-
-MongoDB
-
-↓
-
-Controller
-
-↓
-
-Response
+- React.js
+- Tailwind CSS
+- Node.js
+- Express.js
+- MongoDB Atlas
+- JWT
+- bcrypt
+- Nodemailer
+- Git
+- GitHub
+- Postman
+- Vercel
+- Render
