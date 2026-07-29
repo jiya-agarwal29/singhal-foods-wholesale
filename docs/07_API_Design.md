@@ -1,24 +1,17 @@
-# API Design
-
-## Overview
-
-The application follows the **RESTful API architecture**, where the React frontend communicates with the Express.js backend using HTTP requests and JSON responses. Authentication is implemented using **JWT (JSON Web Tokens)**, while authorization is handled using middleware based on user roles (`customer`, `manager`, and `admin`).
-
----
-
-## Authentication APIs
+# Authentication APIs
 
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|--------|
 | POST | `/api/auth/register` | Register a new business customer | Public |
 | POST | `/api/auth/login` | Login business customer | Public |
+| POST | `/api/auth/forgot-password` | Send password reset link to registered email | Public |
+| POST | `/api/auth/reset-password/:token` | Reset password using reset token | Public |
 | GET | `/api/auth/profile` | Get logged-in user profile | Authenticated |
 | PUT | `/api/auth/profile` | Update user profile | Authenticated |
-| PUT | `/api/auth/change-password` | Change account password | Authenticated |
 
 ---
 
-## Product APIs
+# Product APIs
 
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|--------|
@@ -33,7 +26,7 @@ The application follows the **RESTful API architecture**, where the React fronte
 
 ---
 
-## Cart APIs
+# Cart APIs
 
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|--------|
@@ -45,7 +38,7 @@ The application follows the **RESTful API architecture**, where the React fronte
 
 ---
 
-## Order APIs
+# Order APIs
 
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|--------|
@@ -56,10 +49,11 @@ The application follows the **RESTful API architecture**, where the React fronte
 | PUT | `/api/orders/:id/cancel` | Cancel an order (if applicable) | Authenticated |
 | GET | `/api/orders/all` | View all customer orders | Admin / Manager |
 | PUT | `/api/orders/:id/status` | Update order status | Admin / Manager |
+| PUT | `/api/orders/:id/payment-status` | Update payment status | Admin / Manager |
 
 ---
 
-## Customer Management APIs
+# Customer Management APIs
 
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|--------|
@@ -68,47 +62,8 @@ The application follows the **RESTful API architecture**, where the React fronte
 
 ---
 
-## Dashboard APIs
+# Dashboard APIs
 
 | Method | Endpoint | Description | Access |
 |--------|----------|-------------|--------|
 | GET | `/api/dashboard` | View business dashboard statistics | Admin / Manager |
-
----
-
-## Role-Based Access Control
-
-| Role | Permissions |
-|------|-------------|
-| Customer | Browse products, manage cart, place orders, view profile, and reorder previous orders. |
-| Manager | Manage products, manage orders, view customers, and access dashboard statistics. |
-| Admin | Full access to all application resources, including product, customer, order, and dashboard management. |
-
----
-
-## Authentication Flow
-
-```text
-Client
-   │
-   ▼
-Login / Register
-   │
-   ▼
-JWT Token Generated
-   │
-   ▼
-Client Stores Token
-   │
-   ▼
-Authorization: Bearer <JWT>
-   │
-   ▼
-Authentication Middleware
-   │
-   ▼
-Authorization Middleware
-   │
-   ▼
-Protected Controller
-```
