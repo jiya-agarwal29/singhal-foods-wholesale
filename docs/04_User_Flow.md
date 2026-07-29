@@ -1,12 +1,11 @@
 # User Flow
 
-## 1. Business Customer Flow
+# 1. Business Customer Flow
 
-```
 Home
    │
    ▼
-Register / Login
+Customer Registration / Login
    │
    ▼
 Browse Products
@@ -39,44 +38,55 @@ Place Order
 Order Confirmation
    │
    ▼
-Order History
+View Order History
+   │
+   ▼
+Track Order & Payment Status
    │
    ▼
 ⭐ Quick Reorder
-```
 
 ---
 
-## 2. Administrator Flow
+# 2. Administrator Flow
 
-```
+Seed First Admin
+      │
+      ▼
 Admin Login
       │
       ▼
 Dashboard
       │
- ┌────┼──────────┬──────────┐
- │    │          │          │
- ▼    ▼          ▼          ▼
-Products Orders Inventory Customers
- │      │          │          │
- ▼      ▼          ▼          ▼
-CRUD  Update    Update      View
-      Status     Stock    Customer Details
+ ┌────┼────────────┬────────────┬────────────┬────────────┐
+ │    │            │            │            │            │
+ ▼    ▼            ▼            ▼            ▼            ▼
+Products Orders Customers Payments Notifications Admins
+ │      │          │            │             │            │
+ ▼      ▼          ▼            ▼             ▼            ▼
+CRUD  Update     View        Update      View New      Add/View
+      Order      Customer    Payment     Notifications Admins
+      Status     Details     Status
                     │
                     ▼
-           Low Stock Alerts
+             Inventory Management
+                    │
+                    ▼
+             Low Stock Alerts
                     │
                     ▼
         Smart Restock Suggestions
-```
 
 ---
 
-## 3. Authentication Flow
+# 3. Authentication Flow
 
-```
+## Customer Registration
+
 Register
+   │
+   ▼
+Customer Account Created
    │
    ▼
 Login
@@ -85,15 +95,61 @@ Login
 JWT Authentication
    │
    ▼
-Access Protected Routes
-```
+Customer Dashboard
 
 ---
 
-## 4. Order Flow
+## Admin Authentication
 
-```
-Select Products
+Seed First Admin
+   │
+   ▼
+Admin Login
+   │
+   ▼
+JWT Authentication
+   │
+   ▼
+Admin Dashboard
+   │
+   ▼
+Create New Admin (Optional)
+
+---
+
+## Forgot Password Flow
+
+Login
+   │
+   ▼
+Forgot Password
+   │
+   ▼
+Enter Registered Email
+   │
+   ▼
+Generate OTP
+   │
+   ▼
+OTP Sent to Email
+   │
+   ▼
+Enter OTP
+   │
+   ▼
+OTP Verified
+   │
+   ▼
+Reset Password
+   │
+   ▼
+Login
+
+---
+
+# 4. Order Flow
+
+Browse Products
       │
       ▼
 Shopping Cart
@@ -106,6 +162,13 @@ Business Notes
       │
       ▼
 Place Order
+      │
+      ▼
+Order Saved
+      │
+      ├──────────────► Dashboard Notification
+      │
+      ├──────────────► Email Notification
       │
       ▼
 Pending
@@ -121,13 +184,14 @@ Out for Delivery
       │
       ▼
 Delivered
-```
+      │
+      ▼
+Payment Status Updated
 
 ---
 
-## 5. Quick Reorder Flow
+# 5. Quick Reorder Flow
 
-```
 Order History
       │
       ▼
@@ -144,4 +208,27 @@ Update Quantity (Optional)
       │
       ▼
 Checkout
-```
+      │
+      ▼
+Place Order
+
+---
+
+# 6. Administrator Creation Flow
+
+Seed First Admin
+      │
+      ▼
+Admin Login
+      │
+      ▼
+Admin Dashboard
+      │
+      ▼
+Admin Management
+      │
+      ▼
+Add New Admin
+      │
+      ▼
+New Admin Account Created
