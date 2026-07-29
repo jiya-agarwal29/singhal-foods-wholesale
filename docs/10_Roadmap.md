@@ -1,254 +1,354 @@
 # Project Roadmap
 
-## Purpose
+## Overview
 
-This roadmap outlines the development phases of the **Singhal Foods B2B Wholesale Platform**. It serves as a checklist to monitor project progress from initial setup to deployment.
-
----
-
-# Phase 1 – Project Setup
-
-## Objective
-
-Set up the development environment, project structure, version control, and documentation.
-
-### GitHub & Documentation
-
-- [x] Create GitHub Repository
-- [x] Add Repository Description
-- [x] Create README.md
-- [x] Create `docs/` folder
-- [x] Create project documentation
-
-### Local Project Setup
-
-- [x] Clone repository locally
-- [x] Open project in VS Code
-- [x] Verify Git repository
-
-### React Frontend
-
-- [x] Initialize React using Vite
-- [x] Install project dependencies
-- [x] Configure Tailwind CSS
-- [x] Verify React application
-
-### Node.js Backend
-
-- [x] Initialize Node.js project
-- [x] Install Express.js
-- [x] Install required dependencies
-- [x] Configure Nodemon
-
-### Backend Structure
-
-- [x] Create backend folder structure
-- [x] Create `app.js`
-- [x] Create `server.js`
-
-### Database
-
-- [x] Configure MongoDB Atlas
-- [x] Create `.env`
-- [x] Test MongoDB connection
-
-### Git Configuration
-
-- [x] Configure `.gitignore`
-- [x] Initial project commit
-
-### Verification
-
-- [x] Frontend running successfully
-- [x] Backend running successfully
-- [x] MongoDB connected successfully
-
-**Status:** completed
+The development of the Singhal Foods B2B Wholesale Platform is divided into multiple phases. Each phase focuses on implementing a specific module while ensuring scalability, maintainability, and proper testing.
 
 ---
 
-# Phase 2 – Frontend Development
+# Phase 1 – Project Setup ✅
 
-## Objective
+### Objectives
 
-Develop the customer-facing interface using React and Tailwind CSS.
+- Initialize GitHub Repository
+- Create Project Folder Structure
+- Configure React (Vite)
+- Configure Node.js & Express
+- Connect MongoDB Atlas
+- Configure Environment Variables
+- Install Required Packages
+- Setup Tailwind CSS
+- Create Basic Folder Structure
+- Initial Git Commit
 
-### Customer UI
+### Deliverables
 
-- [ ] Common Header
-- [ ] Common Footer
-- [ ] Home Page
-- [ ] Product Listing Page
-- [ ] Product Details Page
-- [ ] Shopping Cart
-- [ ] Checkout Page
-- [ ] Order History
-- [ ] Quick Reorder
-- [ ] Customer Profile
-
-### Routing
-
-- [ ] Configure React Router
-- [ ] Protected Routes
-- [ ] Navigation
-
-### State Management
-
-- [ ] Authentication Context
-- [ ] Cart Context
-
-### API Integration
-
-- [ ] Configure Axios
-- [ ] Connect frontend with backend APIs
-
-**Status:** ⏳ Planned
+- Project Repository
+- Backend Server Running
+- Frontend Setup
+- Database Connected
 
 ---
 
-# Phase 3 – Backend Development
+# Phase 2 – Authentication Module ✅
 
-## Objective
+### Objectives
 
-Develop REST APIs and business logic using Express.js and MongoDB.
+### Customer
 
-### Authentication
+- Customer Registration
+- Customer Login
+- JWT Authentication
+- Password Encryption (bcrypt)
 
-- [ ] User Registration
-- [ ] User Login
-- [ ] JWT Authentication
-- [ ] Authorization Middleware
+### Account Recovery
 
-### Product Module
+- Forgot Password
+- Email OTP Verification
+- Reset Password
 
-- [ ] Product Model
-- [ ] Product CRUD APIs
-- [ ] Product Search
-- [ ] Category Filter
+### Administrator
 
-### Shopping Cart
+- Secure Admin Login
+- Role-Based Authentication
+- Protected Routes
 
-- [ ] Cart Model
-- [ ] Add to Cart
-- [ ] Update Cart
-- [ ] Remove Cart Item
-- [ ] Clear Cart
+### Deliverables
 
-### Orders
-
-- [ ] Order Model
-- [ ] Place Order
-- [ ] View Order History
-- [ ] Quick Reorder
-
-### Database
-
-- [ ] Create MongoDB Collections
-- [ ] Define Relationships
-- [ ] Seed Sample Data
-
-**Status:** ⏳ Planned
+- Authentication APIs
+- JWT Authentication
+- Protected Routes
+- Password Security
 
 ---
 
-# Phase 4 – Admin Panel
+# Phase 3 – Customer Module
 
-## Objective
+### Objectives
 
-Develop the administration interface for managing the wholesale platform.
+- Customer Dashboard
+- Customer Profile
+- Update Profile
+- Change Password
+- Browse Products
+- Search Products
+- Filter Products
+- Product Details
 
-### Dashboard
+### Deliverables
 
-- [ ] Dashboard Overview
-- [ ] Statistics Cards
-- [ ] Recent Orders
-- [ ] Low Stock Alerts
-
-### Product Management
-
-- [ ] Add Product
-- [ ] Update Product
-- [ ] Delete Product
-
-### Category Management
-
-- [ ] Add Category
-- [ ] Update Category
-- [ ] Delete Category
-
-### Order Management
-
-- [ ] View Orders
-- [ ] Update Order Status
-
-### Customer Management
-
-- [ ] View Customers
-- [ ] Customer Details
-
-### Inventory Management
-
-- [ ] Update Product Stock
-- [ ] Monitor Low Stock
-
-**Status:** ⏳ Planned
+- Customer Dashboard
+- Product Browsing
+- Profile Management
 
 ---
 
-# Phase 5 – Testing
+# Phase 4 – Cart Module
 
-## Objective
+### Objectives
 
-Test the application to ensure reliability and functionality.
+- Add Product to Cart
+- Update Quantity
+- Remove Product
+- View Cart
+- Cart Summary
 
-- [ ] API Testing (Postman)
-- [ ] Authentication Testing
-- [ ] UI Testing
-- [ ] Responsive Design Testing
-- [ ] Error Handling
-- [ ] Bug Fixes
+### Deliverables
 
-**Status:** ⏳ Planned
+- Shopping Cart
+- Cart APIs
+- Cart Management
 
 ---
 
-# Phase 6 – Deployment
+# Phase 5 – Order Module
 
-## Objective
+### Objectives
 
-Deploy the application for public access.
+- Checkout
+- Place Order
+- Business Notes
+- Order History
+- Order Tracking
+- Quick Reorder
+
+### Deliverables
+
+- Order APIs
+- Customer Order History
+- Quick Reorder Feature
+
+---
+
+# Phase 6 – Product Management (Admin)
+
+### Objectives
+
+- Add Product
+- Edit Product
+- Delete Product
+- Product Images
+- Product Availability
+
+### Deliverables
+
+- Product CRUD APIs
+- Product Management Dashboard
+
+---
+
+# Phase 7 – Category Management
+
+### Objectives
+
+- Add Category
+- Update Category
+- Delete Category
+- View Categories
+
+### Deliverables
+
+- Category CRUD APIs
+
+---
+
+# Phase 8 – Inventory Management
+
+### Objectives
+
+- Update Inventory
+- Low Stock Alerts
+- Smart Restock Suggestions
+- Product Availability
+
+### Deliverables
+
+- Inventory Dashboard
+- Low Stock Monitoring
+
+---
+
+# Phase 9 – Customer Management (Admin)
+
+### Objectives
+
+- View Customers
+- Customer Profiles
+- Customer Order History
+- Search Customers
+
+### Deliverables
+
+- Customer Management Dashboard
+
+---
+
+# Phase 10 – Payment Management
+
+### Objectives
+
+- Track Payment Status
+- Mark Orders as Paid
+- View Pending Payments
+- Payment Summary
+
+### Deliverables
+
+- Payment Dashboard
+- Payment APIs
+
+---
+
+# Phase 11 – Notification System
+
+### Objectives
+
+### Customer Notifications
+
+- Order Status Updates
+- Payment Status Updates
+
+### Admin Notifications
+
+- New Order Notifications
+- New Customer Registration
+- Low Stock Alerts
+- Payment Notifications
+
+### Email Notifications
+
+- OTP for Password Reset
+- New Order Notification to Admin
+
+### Deliverables
+
+- Notification Center
+- Email Integration
+
+---
+
+# Phase 12 – Reports & Analytics
+
+### Objectives
+
+- Dashboard Analytics
+- Sales Reports
+- Revenue Reports
+- Top Selling Products
+- Top Customers
+- Pending Payments
+
+### Deliverables
+
+- Reports Dashboard
+- Download Reports
+
+---
+
+# Phase 13 – Admin Management
+
+### Objectives
+
+- Add New Admin
+- View Admins
+- Manage Admin Accounts
+
+### Deliverables
+
+- Admin Management Module
+
+---
+
+# Phase 14 – UI & Frontend
+
+### Objectives
+
+- Responsive Design
+- Customer Dashboard UI
+- Admin Dashboard UI
+- Product Pages
+- Cart Pages
+- Order Pages
+- Profile Pages
+- Payment Pages
+- Notification Pages
+
+### Deliverables
+
+- Complete Frontend
+
+---
+
+# Phase 15 – Testing
+
+### Objectives
+
+- API Testing (Postman)
+- Authentication Testing
+- Cart Testing
+- Order Testing
+- Payment Testing
+- UI Testing
+- Bug Fixes
+
+### Deliverables
+
+- Stable Application
+- Tested APIs
+
+---
+
+# Phase 16 – Deployment
 
 ### Frontend
 
-- [ ] Deploy on Vercel
+- Deploy on Vercel
 
 ### Backend
 
-- [ ] Deploy on Render
+- Deploy on Render
 
 ### Database
 
-- [ ] Configure MongoDB Atlas for Production
+- MongoDB Atlas
 
-### Environment
+### Deliverables
 
-- [ ] Configure Production Environment Variables
-- [ ] Verify Production Deployment
-
-**Status:** ⏳ Planned
+- Live Application
+- Production Database
 
 ---
 
 # Future Enhancements
 
-- [ ] Email Notifications
-- [ ] PDF Invoice Generation
-- [ ] Analytics Dashboard
-- [ ] Sales Reports
-- [ ] Real-Time Order Tracking
-- [ ] AI-Based Product Recommendations
-- [ ] Payment Gateway Integration
-- [ ] Multi-Vendor Support
-- [ ] Mobile Application
+- Online Payment Gateway
+- GST Invoice Generation
+- Barcode Integration
+- AI-Based Demand Forecasting
+- Product Recommendation System
+- Supplier Management
+- Mobile Application
+- Sales Forecast Dashboard
 
-**Status:** 📌 Future Scope
+---
+
+# Current Progress
+
+| Phase | Status |
+|--------|--------|
+| Phase 1 – Project Setup | ✅ Completed |
+| Phase 2 – Authentication | ✅ Completed |
+| Phase 3 – Customer Module | ⏳ In Progress |
+| Phase 4 – Cart Module | ⏳ Pending |
+| Phase 5 – Order Module | ⏳ Pending |
+| Phase 6 – Product Management | ⏳ Pending |
+| Phase 7 – Category Management | ⏳ Pending |
+| Phase 8 – Inventory Management | ⏳ Pending |
+| Phase 9 – Customer Management | ⏳ Pending |
+| Phase 10 – Payment Management | ⏳ Pending |
+| Phase 11 – Notification System | ⏳ Pending |
+| Phase 12 – Reports & Analytics | ⏳ Pending |
+| Phase 13 – Admin Management | ⏳ Pending |
+| Phase 14 – UI & Frontend | ⏳ In Progress |
+| Phase 15 – Testing | ⏳ Pending |
+| Phase 16 – Deployment | ⏳ Pending |
