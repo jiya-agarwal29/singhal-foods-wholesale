@@ -2,86 +2,113 @@
 
 ## Overview
 
-The application follows the REST API architecture. All APIs exchange data in JSON format and communicate between the React frontend and Express backend.
+The application follows the **RESTful API architecture**, where the React frontend communicates with the Express.js backend using HTTP requests and JSON responses. Authentication is implemented using **JWT (JSON Web Tokens)**, while authorization is handled using middleware based on user roles (`customer`, `manager`, and `admin`).
 
 ---
 
-# Authentication APIs
+## Authentication APIs
 
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | /api/auth/register | Register a new business customer |
-| POST | /api/auth/login | Login business customer |
-| GET | /api/auth/profile | Get logged-in user profile |
-| PUT | /api/auth/profile | Update user profile |
-
----
-
-# Product APIs
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | /api/products | Get all products |
-| GET | /api/products/:id | Get product details |
-| GET | /api/products/category/:category | Get products by category |
-| GET | /api/products/search | Search products |
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| POST | `/api/auth/register` | Register a new business customer | Public |
+| POST | `/api/auth/login` | Login business customer | Public |
+| GET | `/api/auth/profile` | Get logged-in user profile | Authenticated |
+| PUT | `/api/auth/profile` | Update user profile | Authenticated |
+| PUT | `/api/auth/change-password` | Change account password | Authenticated |
 
 ---
 
-# Cart APIs
+## Product APIs
 
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | /api/cart | View shopping cart |
-| POST | /api/cart | Add product to cart |
-| PUT | /api/cart/:id | Update cart quantity |
-| DELETE | /api/cart/:id | Remove product from cart |
-| DELETE | /api/cart | Clear shopping cart |
-
----
-
-# Order APIs
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | /api/orders | Place new order |
-| GET | /api/orders | View all customer orders |
-| GET | /api/orders/:id | View order details |
-| POST | /api/orders/:id/reorder | Quick Reorder |
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| GET | `/api/products` | Get all available products | Public |
+| GET | `/api/products/:id` | Get product details | Public |
+| GET | `/api/products?category=:category` | Filter products by category | Public |
+| GET | `/api/products?search=:keyword` | Search products | Public |
+| POST | `/api/products` | Add a new product | Admin / Manager |
+| PUT | `/api/products/:id` | Update product details | Admin / Manager |
+| DELETE | `/api/products/:id` | Delete a product | Admin |
+| GET | `/api/products/low-stock` | View low stock products | Admin |
 
 ---
 
-# Admin Product APIs
+## Cart APIs
 
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | /api/admin/products | Add new product |
-| PUT | /api/admin/products/:id | Update product |
-| DELETE | /api/admin/products/:id | Delete product |
-
----
-
-# Admin Order APIs
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | /api/admin/orders | View all orders |
-| PUT | /api/admin/orders/:id | Update order status |
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| GET | `/api/cart` | View shopping cart | Authenticated |
+| POST | `/api/cart` | Add product to cart | Authenticated |
+| PUT | `/api/cart/:id` | Update product quantity | Authenticated |
+| DELETE | `/api/cart/:id` | Remove product from cart | Authenticated |
+| DELETE | `/api/cart` | Clear shopping cart | Authenticated |
 
 ---
 
-# Admin Customer APIs
+## Order APIs
 
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | /api/admin/customers | View all business customers |
-| GET | /api/admin/customers/:id | View customer details |
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| POST | `/api/orders` | Place a new order | Authenticated |
+| GET | `/api/orders` | View customer's order history | Authenticated |
+| GET | `/api/orders/:id` | View order details | Authenticated |
+| POST | `/api/orders/:id/reorder` | Quickly reorder a previous order | Authenticated |
+| PUT | `/api/orders/:id/cancel` | Cancel an order (if applicable) | Authenticated |
+| GET | `/api/orders/all` | View all customer orders | Admin / Manager |
+| PUT | `/api/orders/:id/status` | Update order status | Admin / Manager |
 
 ---
 
-# Admin Dashboard APIs
+## Customer Management APIs
 
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| GET | /api/admin/dashboard | Dashboard statistics |
-| GET | /api/admin/low-stock | View low stock products |
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| GET | `/api/customers` | View all registered customers | Admin / Manager |
+| GET | `/api/customers/:id` | View customer details | Admin / Manager |
+
+---
+
+## Dashboard APIs
+
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| GET | `/api/dashboard` | View business dashboard statistics | Admin / Manager |
+
+---
+
+## Role-Based Access Control
+
+| Role | Permissions |
+|------|-------------|
+| Customer | Browse products, manage cart, place orders, view profile, and reorder previous orders. |
+| Manager | Manage products, manage orders, view customers, and access dashboard statistics. |
+| Admin | Full access to all application resources, including product, customer, order, and dashboard management. |
+
+---
+
+## Authentication Flow
+
+```text
+Client
+   │
+   ▼
+Login / Register
+   │
+   ▼
+JWT Token Generated
+   │
+   ▼
+Client Stores Token
+   │
+   ▼
+Authorization: Bearer <JWT>
+   │
+   ▼
+Authentication Middleware
+   │
+   ▼
+Authorization Middleware
+   │
+   ▼
+Protected Controller
+```
