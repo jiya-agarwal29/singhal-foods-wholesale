@@ -1,124 +1,467 @@
-# Singhal Foods
+# 🏪 Singhal Foods – B2B Wholesale Management Platform
 
-> A Full-Stack MERN B2B Wholesale Food Ordering & Inventory Management Platform
-
-Singhal Foods is a full-stack MERN web application inspired by my family's wholesale food business. The platform is designed specifically for **hotels, restaurants, caterers, and retailers**, enabling them to place wholesale orders online while allowing administrators to efficiently manage products, inventory, and customer orders.
-
-Unlike traditional B2C grocery platforms, this application focuses on the operational needs of business customers by supporting recurring wholesale purchases, inventory management, and business-specific ordering workflows.
+A full-stack **B2B Wholesale Food Ordering and Inventory Management System** developed for **Singhal Foods**. The platform enables business customers such as hotels, restaurants, cafés, caterers, and retail stores to place wholesale orders while providing administrators with a comprehensive dashboard to manage products, customers, inventory, orders, payments, and business operations.
 
 ---
 
-## 🚀 Tech Stack
+# 📌 Project Overview
 
-### Frontend
+Singhal Foods is a modern wholesale management platform designed to digitize traditional wholesale ordering.
+
+The application allows business customers to:
+
+- Register their business
+- Browse wholesale products
+- Place bulk orders
+- Track order status
+- View payment status
+- Quickly reorder previous purchases
+
+Administrators can:
+
+- Manage products
+- Manage categories
+- Manage inventory
+- Process customer orders
+- Track payments
+- Receive notifications
+- Generate reports
+- Manage administrator accounts
+
+---
+
+# 🚀 Features
+
+## 👤 Customer Module
+
+### Authentication
+
+- Business Registration
+- Secure Login
+- JWT Authentication
+- Forgot Password using Email OTP
+- Reset Password
+- Logout
+
+### Dashboard
+
+- Customer Dashboard
+- Recent Orders
+- Payment Status
+- Quick Actions
+
+### Products
+
+- Browse Products
+- Search Products
+- Product Categories
+- Product Details
+- Product Availability
+
+### Shopping Cart
+
+- Add to Cart
+- Update Quantity
+- Remove Products
+- View Cart Summary
+
+### Orders
+
+- Checkout
+- Place Wholesale Orders
+- Business Notes
+- Order History
+- Order Tracking
+- Quick Reorder
+
+### Profile
+
+- Update Business Profile
+- Change Password
+
+---
+
+## 👨‍💼 Admin Module
+
+### Authentication
+
+- Secure Admin Login
+- Role-Based Authentication
+- Protected Routes
+
+> **Note:** Administrators cannot register through the application. New administrator accounts can only be created by an existing administrator.
+
+### Dashboard
+
+- Total Products
+- Total Orders
+- Total Customers
+- Pending Orders
+- Pending Payments
+- Low Stock Alerts
+- Notifications
+
+### Product Management
+
+- Add Product
+- Update Product
+- Delete Product
+- Manage Product Availability
+
+### Category Management
+
+- Add Category
+- Update Category
+- Delete Category
+
+### Inventory Management
+
+- Update Stock
+- Low Stock Alerts
+- Smart Restock Suggestions
+
+### Order Management
+
+- View Orders
+- Update Order Status
+- View Business Notes
+
+### Customer Management
+
+- View Customers
+- Customer Profiles
+- Customer Order History
+
+### Payment Management
+
+- View Payment Status
+- Mark Orders as Paid
+- Payment Summary
+
+### Notification Center
+
+- New Order Notifications
+- Low Stock Alerts
+- Payment Notifications
+- New Customer Notifications
+
+### Reports & Analytics
+
+- Sales Summary
+- Revenue Reports
+- Top Selling Products
+- Top Customers
+- Payment Statistics
+
+### Admin Management
+
+- View Administrators
+- Add New Administrator
+
+---
+
+# ⭐ Unique Features
+
+## Quick Reorder
+
+Customers can recreate previously placed wholesale orders with a single click.
+
+---
+
+## Business Notes
+
+Customers can provide delivery instructions while placing an order.
+
+Example:
+
+- Deliver before 9 AM
+- Send GST Invoice
+- Separate fragile items
+
+---
+
+## Smart Restock Suggestions
+
+The system automatically recommends restocking quantities whenever stock falls below the minimum threshold.
+
+---
+
+## Low Stock Alerts
+
+Products nearing depletion are highlighted on the administrator dashboard.
+
+---
+
+## Email OTP Password Recovery
+
+Forgot password is handled securely using:
+
+- Registered Email
+- Email OTP Verification
+- Password Reset
+
+---
+
+## Payment Status Tracking
+
+Administrators can update payment status, while customers can view payment progress from their dashboard.
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
 - React.js
 - Tailwind CSS
-- React Router
+- React Router DOM
 - Axios
 
-### Backend
+## Backend
+
 - Node.js
 - Express.js
 
-### Database
-- MongoDB
-- MongoDB Atlas
+## Database
 
-### Authentication
+- MongoDB Atlas
+- Mongoose
+
+## Authentication
+
 - JWT
 - bcrypt
 
-### Deployment
-- Vercel
-- Render
+## Development Tools
 
-### Version Control
 - Git
 - GitHub
+- Postman
+- VS Code
+
+## Deployment
+
+### Frontend
+
+- Vercel
+
+### Backend
+
+- Render
 
 ---
 
-## ✨ Planned Features
-
-### 👤 Business Customer
-
-- Business Registration & Login
-- Browse Products
-- Search Products
-- Category Filtering
-- Product Details
-- Shopping Cart
-- Bulk Wholesale Orders
-- Order History
-- ⭐ Quick Reorder
-- ⭐ Business Notes
-- Profile Management
-
----
-
-### 👨‍💼 Administrator
-
-- Secure Admin Login
-- Dashboard
-- Product Management (CRUD)
-- Inventory Management
-- Stock Updates
-- Low Stock Alerts
-- ⭐ Smart Restock Suggestions
-- Order Management
-- Business Customer Management
-
----
-
-## 🎯 Project Goals
-
-- Digitize the wholesale ordering process.
-- Simplify inventory management.
-- Provide secure authentication and authorization.
-- Deliver a scalable MERN application.
-- Deploy the application for real-world usage.
-
----
-
-## 📂 Repository Structure
+# 📂 Project Structure
 
 ```
-singhal-foods/
+singhal-foods-wholesale/
+
 │
+
 ├── client/
+
+│ ├── public/
+
+│ ├── src/
+
+│ │ ├── assets/
+
+│ │ ├── components/
+
+│ │ ├── pages/
+
+│ │ ├── layouts/
+
+│ │ ├── hooks/
+
+│ │ ├── context/
+
+│ │ ├── services/
+
+│ │ ├── routes/
+
+│ │ ├── utils/
+
+│ │ └── App.jsx
+
+│
+
 ├── server/
+
+│ ├── config/
+
+│ ├── controllers/
+
+│ ├── middleware/
+
+│ ├── models/
+
+│ ├── routes/
+
+│ ├── services/
+
+│ ├── utils/
+
+│ ├── app.js
+
+│ └── server.js
+
+│
+
 ├── docs/
-└── README.md
+
+├── README.md
 ```
 
 ---
 
-## 📖 Documentation
+# 🔐 Authentication Flow
 
-Project documentation is available in the **docs/** folder.
+Customer Registration
 
-Current documentation includes:
+↓
 
-- Project Overview
-- Requirements
-- Features
+Login
 
-More documentation will be added as development progresses.
+↓
+
+JWT Authentication
+
+↓
+
+Protected Routes
+
+↓
+
+Customer Dashboard
 
 ---
 
-## 📌 Project Status
+Forgot Password
 
-🟡 Planning Phase
+↓
 
-The project is currently in the planning and software design stage. Development will begin after completing the project documentation.
+Enter Registered Email
+
+↓
+
+Receive OTP
+
+↓
+
+Verify OTP
+
+↓
+
+Reset Password
+
+↓
+
+Login
 
 ---
 
-## 👩‍💻 Author
+Admin Login
+
+↓
+
+Admin Dashboard
+
+---
+
+# 📦 API Modules
+
+## Authentication
+
+- Register Customer
+- Login
+- Forgot Password
+- Verify OTP
+- Reset Password
+- Get Profile
+- Update Profile
+
+## Products
+
+- Get Products
+- Product Details
+- Search Products
+- Category Products
+
+## Cart
+
+- Add Product
+- Update Quantity
+- Remove Product
+- View Cart
+
+## Orders
+
+- Checkout
+- Place Order
+- Order History
+- Order Details
+- Quick Reorder
+
+## Admin
+
+- Products
+- Categories
+- Inventory
+- Orders
+- Customers
+- Payments
+- Notifications
+- Reports
+- Administrators
+
+---
+
+# 📋 Current Progress
+
+| Module | Status |
+|---------|--------|
+| Project Setup | ✅ Completed |
+| Authentication | ✅ Completed |
+| Customer Module | 🚧 In Progress |
+| Cart Module | ⏳ Pending |
+| Order Module | ⏳ Pending |
+| Product Management | ⏳ Pending |
+| Category Management | ⏳ Pending |
+| Inventory Management | ⏳ Pending |
+| Customer Management | ⏳ Pending |
+| Payment Management | ⏳ Pending |
+| Notification Center | ⏳ Pending |
+| Reports & Analytics | ⏳ Pending |
+| Admin Management | ⏳ Pending |
+| Testing | ⏳ Pending |
+| Deployment | ⏳ Pending |
+
+---
+
+# 🔮 Future Enhancements
+
+- Online Payment Gateway
+- GST Invoice Generation
+- AI-Based Demand Forecasting
+- Product Recommendation System
+- Supplier Management
+- Barcode Integration
+- Mobile Application
+- Advanced Sales Analytics
+
+---
+
+# 👩‍💻 Developed By
 
 **Jiya Agarwal**
 
-B.Tech Information Technology
+Third Year B.Tech (Information Technology)
 
 Vishwakarma Institute of Technology, Pune
+
+---
+
+# 📄 License
+
+This project is developed for academic purposes as a Final Year B.Tech Project.
