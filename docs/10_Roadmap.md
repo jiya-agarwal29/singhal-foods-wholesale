@@ -1,165 +1,444 @@
-Phase 2 – Backend Development done
+# 🚀 Project Development Roadmap
 
-Database
+This roadmap outlines the complete development lifecycle of the Singhal Foods B2B Wholesale Management Platform.
 
-* ☐ User Model
-* ☐ Category Model
-* ☐ Product Model
-* ☐ Cart Model
-* ☐ Order Model
+---
 
-Authentication(verification) done
+# ✅ Phase 1 – Project Setup (Completed)
 
-* ☐ Register cv c
-* ☐ Login
-* ☐ JWT
-* ☐ Password Hashing
-* ☐ Protected Routes
+## Project Initialization
 
-Customer APIs
-(roadmap)
+- ☑ Create GitHub Repository
+- ☑ Setup React (Vite)
+- ☑ Setup Node.js + Express
+- ☑ Configure MongoDB Atlas
+- ☑ Configure Environment Variables
+- ☑ Install Required Packages
+- ☑ Setup Tailwind CSS
+- ☑ Create Folder Structure
+- ☑ Initial Git Commit
 
-* ☐ Product APIs
-* ☐ Cart APIs
-* ☐ Order APIs
-* ☐ Quick Reorder
+---
 
-Admin APIs 
+## Documentation
 
-* ☐ Dashboard
-* ☐ Product CRUD
-* ☐ Customer Management
-* ☐ Order Management
-* ☐ Low Stock Products
+- ☑ SRS
+- ☑ Features
+- ☑ Pages
+- ☑ User Flow
+- ☑ Database Design
+- ☑ API Design
+- ☑ UI Wireframes
+- ☑ Folder Structure
+- ☑ UI Framework
+- ☑ README
+- ☑ Roadmap
 
-Testing
+---
 
-* ☐ Test every API using Postman
+### 🎯 Milestone
 
-Milestone: Backend is fully functional.
+✔ Project structure ready for development.
 
-add on github!
-⸻
+---
 
-🎨 Phase 3 – UI/UX Design (Figma)
+# ✅ Phase 2 – Backend Development (Authentication) (Completed)
 
-Create the complete design before writing React components.
+## Database Models
 
-Customer Screens
+- ☑ User Model
+- ☑ Category Model
+- ☑ Product Model
+- ☑ Cart Model
+- ☑ Order Model
 
-* ☐ Login
-* ☐ Register
-* ☐ Home
-* ☐ Product Listing
-* ☐ Product Details
-* ☐ Cart
-* ☐ Checkout
-* ☐ Order History
-* ☐ Profile
+---
 
-Admin Screens
+## Authentication
 
-* ☐ Login
-* ☐ Dashboard
-* ☐ Products
-* ☐ Add Product
-* ☐ Edit Product
-* ☐ Orders
-* ☐ Customers
-* ☐ Low Stock
+- ☑ Customer Registration
+- ☑ Customer Login
+- ☑ JWT Authentication
+- ☑ Password Hashing (bcrypt)
+- ☑ Protected Routes
+- ☑ Get Profile API
+- ☑ Update Profile API
 
-Design System
+---
 
-* ☐ Color Palette
-* ☐ Typography
-* ☐ Buttons
-* ☐ Forms
-* ☐ Cards
-* ☐ Navbar
-* ☐ Footer
-* ☐ Icons
-* ☐ Responsive Layout
+## API Testing
 
-Milestone: Complete Figma prototype with all screens.
+- ☑ Register API
+- ☑ Login API
+- ☑ Profile API
+- ☑ JWT Verification
+- ☑ MongoDB Testing
+- ☑ Postman Testing
 
-⸻
+---
 
-💻 Phase 4 – Frontend Development
+### 🎯 Milestone
 
-Customer
+✔ Authentication Module Completed
 
-* ☐ Authentication Pages
-* ☐ Home
-* ☐ Products
-* ☐ Product Details
-* ☐ Cart
-* ☐ Checkout
-* ☐ Orders
-* ☐ Profile
+---
 
-Admin
+# 🚧 Phase 3 – Customer Backend APIs
 
-* ☐ Dashboard
-* ☐ Products
-* ☐ Orders
-* ☐ Customers
-* ☐ Low Stock
+## Product APIs
 
-API Integration
+- ☐ Get All Products
+- ☐ Product Details
+- ☐ Search Products
+- ☐ Filter Products
+- ☐ Products by Category
 
-* ☐ Connect frontend to backend
-* ☐ Authentication
-* ☐ Cart
-* ☐ Orders
+---
 
-⸻
+## Cart APIs
 
-🧪 Phase 5 – Testing & Optimization
+- ☐ View Cart
+- ☐ Add Product
+- ☐ Update Quantity
+- ☐ Remove Product
+- ☐ Clear Cart
 
-* ☐ Responsive Design
-* ☐ Loading States
-* ☐ Error Handling
-* ☐ Form Validation
-* ☐ Performance Optimization
-* ☐ Security Checks
+---
 
-⸻
+## Order APIs
 
-🚀 Phase 6 – Deployment
+- ☐ Checkout
+- ☐ Place Order
+- ☐ Order History
+- ☐ Order Details
+- ☐ Order Status
 
-Backend
+---
 
-* ☐ Deploy to Render
+## Quick Reorder
 
-Frontend
+- ☐ Reorder Previous Order
 
-* ☐ Deploy to Vercel
+---
 
-Database
+## Customer Profile
 
-* ☐ Connect MongoDB Atlas
+- ☐ Update Profile
+- ☐ Change Password
 
-Domain (Optional)
+---
 
-* ☐ Custom Domain
+### API Testing
 
-⸻
+- ☐ Test Every Customer API
 
-📚 Phase 7 – Documentation & Portfolio
+---
 
-GitHub
+### 🎯 Milestone
 
-* ☐ README
-* ☐ Screenshots
-* ☐ Architecture Diagram
-* ☐ API Documentation
-* ☐ Database Design
-* ☐ Folder Structure
-* ☐ Installation Guide
+✔ Customer Backend Fully Functional
 
-Portfolio
+---
 
-* ☐ Add project to LinkedIn
-* ☐ Add project to Resume
-* ☐ Record demo video
-* ☐ Deploy live demo
+# 🚧 Phase 4 – Admin Backend APIs
+
+## Dashboard
+
+- ☐ Dashboard Statistics
+- ☐ Recent Orders
+- ☐ Pending Payments
+- ☐ Notifications
+
+---
+
+## Product Management
+
+- ☐ Add Product
+- ☐ Update Product
+- ☐ Delete Product
+
+---
+
+## Category Management
+
+- ☐ Add Category
+- ☐ Update Category
+- ☐ Delete Category
+
+---
+
+## Inventory
+
+- ☐ Update Stock
+- ☐ Low Stock Alerts
+- ☐ Smart Restock Suggestions
+
+---
+
+## Customer Management
+
+- ☐ View Customers
+- ☐ Customer Details
+- ☐ Customer Order History
+
+---
+
+## Order Management
+
+- ☐ View Orders
+- ☐ Update Order Status
+- ☐ View Business Notes
+
+---
+
+## Payment Management
+
+- ☐ View Pending Payments
+- ☐ Mark Payment as Paid
+- ☐ Payment Summary
+
+---
+
+## Notification APIs
+
+- ☐ New Order Notification
+- ☐ Low Stock Notification
+- ☐ Payment Notification
+
+---
+
+## Admin Management
+
+- ☐ Add New Admin
+- ☐ View Admins
+
+---
+
+### API Testing
+
+- ☐ Test Every Admin API
+
+---
+
+### 🎯 Milestone
+
+✔ Complete Backend Finished
+
+---
+
+# 🎨 Phase 5 – UI/UX Design (Figma)
+
+## Customer Screens
+
+- ☐ Home
+- ☐ Login
+- ☐ Register
+- ☐ Forgot Password
+- ☐ OTP Verification
+- ☐ Reset Password
+- ☐ Customer Dashboard
+- ☐ Product Listing
+- ☐ Product Details
+- ☐ Shopping Cart
+- ☐ Checkout
+- ☐ Order History
+- ☐ Profile
+
+---
+
+## Admin Screens
+
+- ☐ Login
+- ☐ Dashboard
+- ☐ Products
+- ☐ Categories
+- ☐ Inventory
+- ☐ Orders
+- ☐ Customers
+- ☐ Payments
+- ☐ Notifications
+- ☐ Reports
+- ☐ Admin Management
+
+---
+
+## Design System
+
+- ☐ Colour Palette
+- ☐ Typography
+- ☐ Buttons
+- ☐ Forms
+- ☐ Cards
+- ☐ Navbar
+- ☐ Sidebar
+- ☐ Footer
+- ☐ Icons
+- ☐ Responsive Layout
+
+---
+
+### 🎯 Milestone
+
+✔ Complete Figma Prototype
+
+---
+
+# 💻 Phase 6 – Frontend Development
+
+## Customer Module
+
+- ☐ Authentication
+- ☐ Dashboard
+- ☐ Products
+- ☐ Product Details
+- ☐ Cart
+- ☐ Checkout
+- ☐ Orders
+- ☐ Profile
+- ☐ Forgot Password Flow
+
+---
+
+## Admin Module
+
+- ☐ Dashboard
+- ☐ Products
+- ☐ Categories
+- ☐ Inventory
+- ☐ Orders
+- ☐ Customers
+- ☐ Payments
+- ☐ Notifications
+- ☐ Reports
+- ☐ Admin Management
+
+---
+
+## API Integration
+
+- ☐ Authentication
+- ☐ Products
+- ☐ Cart
+- ☐ Orders
+- ☐ Customer APIs
+- ☐ Admin APIs
+
+---
+
+### 🎯 Milestone
+
+✔ Complete Frontend
+
+---
+
+# 🧪 Phase 7 – Testing & Optimization
+
+## Functional Testing
+
+- ☐ Customer Flow
+- ☐ Admin Flow
+- ☐ Authentication
+- ☐ Orders
+- ☐ Payments
+
+---
+
+## UI Testing
+
+- ☐ Responsive Design
+- ☐ Browser Compatibility
+- ☐ Loading States
+- ☐ Error Handling
+
+---
+
+## Performance
+
+- ☐ Image Optimization
+- ☐ Lazy Loading
+- ☐ API Optimization
+
+---
+
+## Security
+
+- ☐ JWT Testing
+- ☐ Route Protection
+- ☐ Input Validation
+- ☐ Password Security
+
+---
+
+### 🎯 Milestone
+
+✔ Production Ready
+
+---
+
+# 🚀 Phase 8 – Deployment
+
+## Backend
+
+- ☐ Deploy on Render
+
+---
+
+## Frontend
+
+- ☐ Deploy on Vercel
+
+---
+
+## Database
+
+- ☐ MongoDB Atlas Production
+
+---
+
+## Final Testing
+
+- ☐ Live API Testing
+- ☐ Production Bug Fixes
+
+---
+
+### 🎯 Milestone
+
+✔ Live Project
+
+---
+
+# 📚 Phase 9 – Documentation & Portfolio
+
+## Documentation
+
+- ☑ README
+- ☑ API Design
+- ☑ Database Design
+- ☑ Folder Structure
+- ☑ UI Wireframes
+- ☑ Roadmap
+
+---
+
+## GitHub
+
+- ☐ Screenshots
+- ☐ Installation Guide
+- ☐ Environment Setup
+- ☐ Architecture Diagram
+
+---
+
+## Portfolio
+
+- ☐ LinkedIn Project
+- ☐ Resume Update
+- ☐ Demo Video
+- ☐ Live Project Link
+
+---
+
+### 🎯 Final Milestone
+
+🎉 Singhal Foods Production Ready
